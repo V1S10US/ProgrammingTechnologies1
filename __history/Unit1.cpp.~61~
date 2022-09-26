@@ -1,0 +1,66 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Unit2.h"
+#include "Unit3.h"
+#include "FileCreationForm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1, *Form2;
+//char *  filename;
+//extern char* filename;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+StringGrid1->Cells[0][0] = "Наименование автомобиля";
+StringGrid1->Cells[1][0] = "Марка автомобиля";
+StringGrid1->Cells[2][0] = "Число мест";
+StringGrid1->Cells[3][0] = "Расход бензина";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Open3Click(TObject *Sender)
+{
+	OpenDialog1->Execute();
+
+	AnsiString filename;
+	char * fn;
+	filename = OpenDialog1->FileName;
+
+	std::strcpy(fn, filename.c_str());
+
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Add1Click(TObject *Sender)
+{
+	Close();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::About1Click(TObject *Sender)
+{
+	AboutForm->ShowModal();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::New1Click(TObject *Sender)
+{
+
+
+	FileCreator->ShowModal();
+
+
+
+}
+//---------------------------------------------------------------------------
+
+
+

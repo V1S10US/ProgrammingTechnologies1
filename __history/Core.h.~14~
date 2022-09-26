@@ -1,0 +1,45 @@
+//---------------------------------------------------------------------------
+
+#ifndef CoreH
+#define CoreH
+//---------------------------------------------------------------------------
+#endif
+
+#include <stdio.h>
+
+struct RawRecord
+
+{
+	char car_name[100];       //  наименование машины
+	char car_brand[100];      // марка
+	char num_seats[100];     //  число мест  int?
+	char mileage[100];       //  –асход бензина int?
+	int pos;
+
+};
+
+struct  Record
+{
+	char car_name[100];       //  наименование машины
+	char* car_brand[100];      // марка
+	int num_seats;     //  число мест  int?
+	int mileage;
+};
+
+const int max_records = 100;
+
+extern char * filename; // default filename
+FILE * f;
+
+
+
+struct DeletedBlocks
+{
+
+	int count;
+
+};
+
+int AddRecord(RawRecord rec);
+
+int AddFile(char * c_filename);
