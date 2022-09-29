@@ -16,7 +16,9 @@ __published:	// IDE-managed Components
 	TEdit *Edit2;
 	TEdit *Edit3;
 	TEdit *Edit4;
+	TButton *CancelButton;
 	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall CancelButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TAddingRecordForm(TComponent* Owner);

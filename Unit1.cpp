@@ -80,3 +80,21 @@ Close();
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm1::Save1Click(TObject *Sender)
+{
+	/* Save as existing or new file, rewrite file with new records */
+   SaveDialog1->Execute();
+   AnsiString filename;
+   char fn[150];
+
+   filename = OpenDialog1->FileName;
+
+   std::strcpy(fn, filename.c_str());
+
+   SaveFile(fn);
+
+}
+//---------------------------------------------------------------------------
+
+

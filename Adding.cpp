@@ -36,10 +36,22 @@ void __fastcall TAddingRecordForm::Button1Click(TObject *Sender)
 	strcpy(temp_rec.mileage, mileage.c_str());
 	temp_rec.mileage[mileage.Length() + 1]  = '\0';
 
-    temp_rec.pos = records_amount + 1;
+    temp_rec.pos = 0;
+
 
 	AddRecord(temp_rec);
+
+	Edit1->Text = "";
+	Edit2->Text = "";
+	Edit3->Text = "";
+	Edit4->Text = "";
 
 	Close();
 }
 //---------------------------------------------------------------------------
+void __fastcall TAddingRecordForm::CancelButtonClick(TObject *Sender)
+{
+    Close();
+}
+//---------------------------------------------------------------------------
+

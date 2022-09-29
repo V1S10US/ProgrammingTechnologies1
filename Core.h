@@ -12,42 +12,40 @@
 struct RawRecord
 
 {
-	char car_name[100];       //  наименование машины
-	char car_brand[100];      // марка
-	char num_seats[100];     //  число мест  int?
-	char mileage[100];       //  –асход бензина int?
+	char car_name[10];       //  наименование машины
+	char car_brand[10];      // марка
+	char num_seats[10];     //  число мест  int?
+	char mileage[10];       //  –асход бензина int?
 	int pos;
 
 };
 
 struct  Record
 {
-	char car_name[100];       //  наименование машины
-	char* car_brand[100];      // марка
+	char car_name[10];       //  наименование машины
+	char car_brand[10];      // марка
 	int num_seats;     //  число мест  int?
 	int mileage;
 };
 
 const int MAX_RECORDS = 100;
 
-char  filename[100]; // default filename
-FILE * f;
+char  FILENAME[100]; // default filename
+
 int records_amount = 0;
 
+RawRecord RecordsArray[MAX_RECORDS];  // global array with all current records
 
 
-struct DeletedBlocks
-{
 
-	int count;
-
-};
 
 int AddRecord(RawRecord rec);
 
 int CreateFile(char c_filename[150]);
 
 int AddFile(char c_filename[150]);
+
+int SaveFile(char c_filename[150]);
 
 int OpenFile(char c_filename[150]);
 

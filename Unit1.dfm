@@ -30,6 +30,7 @@ object Form1: TForm1
     Constraints.MinWidth = 440
     FixedCols = 0
     RowCount = 100
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goFixedRowDefAlign]
     TabOrder = 0
     ColWidths = (
       153
@@ -38,8 +39,8 @@ object Form1: TForm1
       93)
   end
   object MainMenu1: TMainMenu
-    Left = 32
-    Top = 24
+    Left = 8
+    Top = 8
     object Open1: TMenuItem
       Caption = 'File'
       object Open3: TMenuItem
@@ -49,6 +50,10 @@ object Form1: TForm1
       object New1: TMenuItem
         Caption = 'New'
         OnClick = New1Click
+      end
+      object Save1: TMenuItem
+        Caption = 'Save'
+        OnClick = Save1Click
       end
       object Exit2: TMenuItem
         Caption = 'Exit'
@@ -83,16 +88,20 @@ object Form1: TForm1
     end
   end
   object OpenDialog1: TOpenDialog
-    Top = 24
+    Left = 16
+    Top = 88
   end
   object NewDialog: TOpenDialog
     Title = #1057#1086#1079#1076#1072#1090#1100' '#1085#1086#1074#1099#1081' '#1092#1072#1081#1083
-    Left = 64
-    Top = 24
+    Left = 56
+    Top = 16
   end
-  object CustomizeDlg1: TCustomizeDlg
-    StayOnTop = False
-    Left = 32
+  object OpenDialog2: TOpenDialog
+    Left = 16
     Top = 144
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 64
+    Top = 88
   end
 end

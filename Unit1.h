@@ -35,12 +35,15 @@ __published:	// IDE-managed Components
 	TOpenDialog *OpenDialog1;
 	TMenuItem *Exit2;
 	TOpenDialog *NewDialog;
-	TCustomizeDlg *CustomizeDlg1;
+	TOpenDialog *OpenDialog2;
+	TSaveDialog *SaveDialog1;
+	TMenuItem *Save1;
 	void __fastcall Open3Click(TObject *Sender);
 	void __fastcall AddRecordClick(TObject *Sender);
 	void __fastcall About1Click(TObject *Sender);
 	void __fastcall New1Click(TObject *Sender);
 	void __fastcall Exit2Click(TObject *Sender);
+	void __fastcall Save1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);

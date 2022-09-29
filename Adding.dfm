@@ -14,7 +14,7 @@ object AddingRecordForm: TAddingRecordForm
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 216
+    Left = 160
     Top = 184
     Width = 75
     Height = 25
@@ -53,5 +53,14 @@ object AddingRecordForm: TAddingRecordForm
     Height = 21
     TabOrder = 4
     TextHint = 'Gas consumption'
+  end
+  object CancelButton: TButton
+    Left = 264
+    Top = 184
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    TabOrder = 5
+    OnClick = CancelButtonClick
   end
 end

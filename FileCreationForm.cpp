@@ -20,10 +20,11 @@ void __fastcall TFileCreator::Button1Click(TObject *Sender)
 	AnsiString new_filename = Edit1->Text;
 	char c_filename[150];
 
-	new_filename = "D:\\Programming\\Projects\\ProgrammingTechnologies\\Lab1\\tables\\" + new_filename + ".bin";
+	new_filename = new_filename + ".bin";
 
 	strcpy(c_filename, new_filename.c_str());
 
+    *FILENAME = *c_filename;
 	AddFile(c_filename);
 	//OpenFile(c_filename);
 
