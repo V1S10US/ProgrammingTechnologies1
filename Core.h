@@ -25,7 +25,7 @@ struct  Record
 	char car_name[10];       //  наименование машины
 	char car_brand[10];      // марка
 	int num_seats;     //  число мест  int?
-	int mileage;
+	double mileage;
 };
 
 const int MAX_RECORDS = 100;
@@ -34,7 +34,7 @@ char  FILENAME[100]; // default filename
 
 int records_amount = 0;
 
-RawRecord RecordsArray[MAX_RECORDS];  // global array with all current records
+Record RecordsArray[MAX_RECORDS];  // global array with all current records
 
 
 

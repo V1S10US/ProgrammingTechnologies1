@@ -49,19 +49,18 @@ int SaveFile(char c_filename[150]) {
 
 int AddRecord(RawRecord new_rec)
 {
-	RawRecord  r;
+	//RawRecord  r = new_rec;
 
 	int pos = FindFreeSpace(); // FindFreeSpace();
 
-	fseek(f, 0, SEEK_SET);
-
+	//fseek(f, 0, SEEK_SET);
 
 	fseek(f,sizeof(int) + pos * sizeof(RawRecord), SEEK_SET);
-	fwrite(&new_rec, sizeof(RawRecord), 0, f);
-
+	fwrite(&new_rec, sizeof(RawRecord), 1, f);
+	//fclose(f);
+    //OpenFile(FILENAME);
 
 	records_amount += 1;
-
 
 	return 1;
 
@@ -90,7 +89,6 @@ int FindFreeSpace() {
 	if (first_del_element == -1)    // write to end of file
 	{
 		index = records_amount;
-
 	}
 	else
 	{
@@ -112,8 +110,6 @@ int ShowTable(){
 	 int is_empty;
 	 fread(&is_empty, sizeof(int), 1, f);
 
-
-
 		RawRecord temp_rec;
 		for (int i=1; i <= records_remain; ++i) {
 			fread(&temp_rec, sizeof(RawRecord), 1, f);
@@ -121,9 +117,7 @@ int ShowTable(){
 			Form1->StringGrid1->Cells[1][i] = AnsiString(temp_rec.car_brand);
 			Form1->StringGrid1->Cells[2][i] = AnsiString(temp_rec.num_seats);
 			Form1->StringGrid1->Cells[3][i] = AnsiString(temp_rec.mileage);
-
 		}
-
 
 	 return 1;
 
