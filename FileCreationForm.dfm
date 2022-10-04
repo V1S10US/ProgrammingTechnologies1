@@ -28,13 +28,22 @@ object FileCreator: TFileCreator
     TabOrder = 0
     TextHint = 'filename.bin'
   end
-  object Button1: TButton
-    Left = 136
-    Top = 88
+  object CreateButton: TButton
+    Left = 72
+    Top = 96
     Width = 75
     Height = 25
     Caption = #1057#1086#1079#1076#1072#1090#1100
     TabOrder = 1
-    OnClick = Button1Click
+    OnClick = CreateButtonClick
+  end
+  object CancelButton: TButton
+    Left = 200
+    Top = 96
+    Width = 75
+    Height = 25
+    Caption = #1054#1090#1084#1077#1085#1072
+    TabOrder = 2
+    OnClick = CancelButtonClick
   end
 end

@@ -1,0 +1,97 @@
+// ---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Unit2.h"
+#include "Unit3.h"
+#include "FileCreationForm.h"
+#include "Adding.h"
+#include <Core.h>
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1, *Form2;
+AnsiString Filename;
+// ---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
+	StringGrid1->Cells[0][0] = "Наименование автомобиля";
+	StringGrid1->Cells[1][0] = "Марка автомобиля";
+	StringGrid1->Cells[2][0] = "Число мест";
+	StringGrid1->Cells[3][0] = "Расход бензина";
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Open3Click(TObject *Sender) {
+	OpenDialog1->Execute();
+
+	AnsiString Filename;
+	char fn[150];
+	Filename = OpenDialog1->FileName;
+
+	std::strcpy(fn, Filename.c_str());
+
+	OpenFile(fn);
+	// SortTable();
+	ShowTable();
+
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::AddRecordClick(TObject *Sender) {
+
+	if (Filename != "") {
+		AddingRecordForm->ShowModal();
+
+		ShowTable();
+	}
+	else {
+		OpenDialog1->Execute();
+
+		char fn[150];
+		Filename = OpenDialog1->FileName;
+
+		std::strcpy(fn, Filename.c_str());
+
+		OpenFile(fn);
+
+        AddingRecordForm->ShowModal();
+		// SortTable();
+		ShowTable();
+	}
+
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::About1Click(TObject *Sender) {
+	AboutForm->ShowModal();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::New1Click(TObject *Sender) {
+	FileCreator->ShowModal();
+	AnsiString Filename = FileCreator->Edit1->Text;
+
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Exit2Click(TObject *Sender) {
+	Close();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Save1Click(TObject *Sender) {
+	/* Save as existing or new file, rewrite file with new records */
+	SaveDialog1->Execute();
+	AnsiString filename;
+	char fn[150];
+
+	filename = SaveDialog1->FileName;
+
+	std::strcpy(fn, filename.c_str());
+
+	SaveFile(fn);
+
+}
+// ---------------------------------------------------------------------------

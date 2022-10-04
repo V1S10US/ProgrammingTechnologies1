@@ -8,16 +8,16 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 //---------------------------------------------------------------------------
-class TFrame2 : public TFrame
+class TAboutFrame : public TFrame
 {
 __published:	// IDE-managed Components
 	TLabel *Label1;
 	TLabel *Label2;
 private:	// User declarations
 public:		// User declarations
-	__fastcall TFrame2(TComponent* Owner);
+	__fastcall TAboutFrame(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TFrame2 *Frame2;
+extern PACKAGE TAboutFrame *AboutFrame;
 //---------------------------------------------------------------------------
 #endif

@@ -7,9 +7,9 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TFrame2 *Frame2;
+TAboutFrame *AboutFrame;
 //---------------------------------------------------------------------------
-__fastcall TFrame2::TFrame2(TComponent* Owner)
+__fastcall TAboutFrame::TAboutFrame(TComponent* Owner)
 	: TFrame(Owner)
 {
 }

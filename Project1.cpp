@@ -5,7 +5,7 @@
 #include <tchar.h>
 //---------------------------------------------------------------------------
 USEFORM("Unit1.cpp", Form1);
-USEFORM("Unit2.cpp", Frame2); /* TFrame: File Type */
+USEFORM("Unit2.cpp", AboutFrame); /* TFrame: File Type */
 USEFORM("Unit3.cpp", AboutForm);
 USEFORM("Adding.cpp", AddingRecordForm);
 USEFORM("FileCreationForm.cpp", FileCreator);

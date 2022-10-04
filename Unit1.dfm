@@ -88,10 +88,13 @@ object Form1: TForm1
     end
   end
   object OpenDialog1: TOpenDialog
+    Filter = 'Binary file|*.bin'
     Left = 16
     Top = 88
   end
   object NewDialog: TOpenDialog
+    Filter = '*.bin'
+    Options = [ofHideReadOnly, ofPathMustExist, ofEnableSizing]
     Title = #1057#1086#1079#1076#1072#1090#1100' '#1085#1086#1074#1099#1081' '#1092#1072#1081#1083
     Left = 56
     Top = 16

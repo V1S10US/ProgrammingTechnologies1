@@ -1,4 +1,4 @@
-object Frame2: TFrame2
+object AboutFrame: TAboutFrame
   Left = 0
   Top = 0
   Width = 220

@@ -25,6 +25,7 @@ int AddFile(char c_filename[150]) {
 	f = fopen(c_filename, "rb+");
 	int tmp = -1;
 	int code = fwrite(&tmp, sizeof(int), 1, f);
+    records_amount = 0;
 
     return code;
 }
@@ -61,6 +62,7 @@ int AddRecord(RawRecord new_rec)
     //OpenFile(FILENAME);
 
 	records_amount += 1;
+    RecordsArray[records_amount] = new_rec;
 
 	return 1;
 
@@ -71,17 +73,14 @@ int OpenFile(char c_filename[150]) {
 
 	 f = fopen(c_filename, "wb+");
 	 int code = fseek(f, 0, SEEK_SET);
-	 records_amount = 0;
+//	 records_amount = 0; v// = count_records(file);
 
 	 return code;
 };
 
 int FindFreeSpace() {
 
-	int index = -1;
-	int first_del_element;
-
-	//f = fopen(c_filename, "rb+");
+	int index, first_del_element;
 
 	fseek(f, 0, SEEK_SET);
 	fread(&first_del_element, sizeof(first_del_element), 1, f);
@@ -90,13 +89,20 @@ int FindFreeSpace() {
 	{
 		index = records_amount;
 	}
-	else
+	else      //  go to first free element using head pointer
 	{
+		index = first_del_element;
+
+		// Update head pointer
+
 		RawRecord temp_record;
 		index = first_del_element;
 		fseek(f, sizeof(int) + sizeof(RawRecord)*index, SEEK_SET);
 		fread(&temp_record,sizeof(RawRecord), 1, f);
 		first_del_element = temp_record.pos;
+		fseek(f, 0, SEEK_SET);
+		fwrite(&first_del_element, sizeof(int), 1, f);
+
 	}
 
 	return index;
