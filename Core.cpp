@@ -41,28 +41,22 @@ int SaveFile(char c_filename[150]) {
 	fseek(f, sizeof(int),SEEK_SET);
 
 	for (auto rec : RecordsArray) {
-	   code	= fwrite(&rec,sizeof(Record),1, f);
+	   code	= fwrite(&rec,sizeof(FileRecord),1, f);
 	}
-
 
 	return code;
 }
 
-int AddRecord(RawRecord new_rec)
+int AddRecord(FileRecord new_rec)
 {
-	//RawRecord  r = new_rec;
+	int pos = FindFreeSpace();
 
-	int pos = FindFreeSpace(); // FindFreeSpace();
-
-	//fseek(f, 0, SEEK_SET);
-
-	fseek(f,sizeof(int) + pos * sizeof(RawRecord), SEEK_SET);
-	fwrite(&new_rec, sizeof(RawRecord), 1, f);
-	//fclose(f);
-    //OpenFile(FILENAME);
+	fseek(f,sizeof(int) + pos * sizeof(FileRecord), SEEK_SET);
+	fwrite(&new_rec, sizeof(FileRecord), 1, f);
 
 	records_amount += 1;
-    RecordsArray[records_amount] = new_rec;
+
+	RecordsArray[records_amount] = to_virtual(new_rec);
 
 	return 1;
 
@@ -95,11 +89,14 @@ int FindFreeSpace() {
 
 		// Update head pointer
 
-		RawRecord temp_record;
+		FileRecord temp_record;
+
 		index = first_del_element;
-		fseek(f, sizeof(int) + sizeof(RawRecord)*index, SEEK_SET);
-		fread(&temp_record,sizeof(RawRecord), 1, f);
-		first_del_element = temp_record.pos;
+		fseek(f, sizeof(int) + sizeof(FileRecord)*index, SEEK_SET);
+		fread(&temp_record, sizeof(FileRecord), 1, f);
+
+		first_del_element = temp_record.next;
+
 		fseek(f, 0, SEEK_SET);
 		fwrite(&first_del_element, sizeof(int), 1, f);
 
@@ -107,6 +104,19 @@ int FindFreeSpace() {
 
 	return index;
 } ;
+
+VirtualRecord to_virtual(FileRecord rec) {
+	VirtualRecord result;
+
+	strcpy(result.car_name, rec.car_name);
+	strcpy(result.car_brand, rec.car_brand);
+	result.num_seats = rec.num_seats;
+	result.mileage = rec.mileage;
+	result.pos = NULL;
+
+	return result;
+};
+
 
 int ShowTable(){
 
@@ -116,9 +126,9 @@ int ShowTable(){
 	 int is_empty;
 	 fread(&is_empty, sizeof(int), 1, f);
 
-		RawRecord temp_rec;
+		FileRecord temp_rec;
 		for (int i=1; i <= records_remain; ++i) {
-			fread(&temp_rec, sizeof(RawRecord), 1, f);
+			fread(&temp_rec, sizeof(FileRecord), 1, f);
 			Form1->StringGrid1->Cells[0][i] = AnsiString(temp_rec.car_name);
 			Form1->StringGrid1->Cells[1][i] = AnsiString(temp_rec.car_brand);
 			Form1->StringGrid1->Cells[2][i] = AnsiString(temp_rec.num_seats);

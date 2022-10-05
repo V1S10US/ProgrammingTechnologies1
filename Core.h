@@ -9,23 +9,24 @@
 #include <stdlib.h>
 #include "Unit1.h"
 
-struct RawRecord
+struct FileRecord
 
-{
-	char car_name[40];       //  наименование машины
-	char car_brand[40];      // марка
-	char num_seats[40];     //  число мест  int?
-	char mileage[40];       //  Расход бензина int?
-	int pos;
-
-};
-
-struct  Record
 {
 	char car_name[40];       //  наименование машины
 	char car_brand[40];      // марка
 	int num_seats;     //  число мест  int?
+	double mileage;       //  Расход бензина int?
+	int next;              // позиция следующей свободной записи
+
+};
+
+struct  VirtualRecord
+{
+	char car_name[40];       //  наименование машины
+	char car_brand[40];      // марка
+	int num_seats;           //  число мест  int?
 	double mileage;
+	int pos;                 // позиция в массиве
 };
 
 const int MAX_RECORDS = 100;
@@ -34,12 +35,10 @@ char  FILENAME[255]; // default filename
 
 int records_amount = 0;
 
-RawRecord RecordsArray[MAX_RECORDS];  // global array with all current records
+VirtualRecord RecordsArray[MAX_RECORDS];  // global array with all current records
 
 
-
-
-int AddRecord(RawRecord rec);
+int AddRecord(FileRecord rec);
 
 int CreateFile(char c_filename[150]);
 
@@ -50,5 +49,7 @@ int SaveFile(char c_filename[150]);
 int OpenFile(char c_filename[150]);
 
 int FindFreeSpace();
+
+VirtualRecord to_virtual(FileRecord rec);
 
 int ShowTable();

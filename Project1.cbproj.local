@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.cpp=D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.900,D:\Programming\Projects\Programming Technologies\Lab1\Project1PCH1.h=D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.982,D:\Programming\Projects\Programming Technologies\Lab1\Project1.cbproj=D:\Programming\Projects\Programming Techologies\II Course\Project1.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.049,=D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.493,=D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Technologies\Lab1\Unit1.cpp=D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.dfm=D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.595,=C:\Programming\Programming Technologies\Lab1\Unit4.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.663,=D:\Programming\Projects\Programming Technologies\Lab1\Unit3.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Adding.h=C:\Programming\Programming Technologies\Lab1\Unit4.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.206,=D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Technologies\Lab1\Unit1.h=D:\Programming\Projects\Programming Techologies\II Course\Unit1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Adding.cpp=C:\Programming\Programming Technologies\Lab1\Unit4.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Technologies\Lab1\Unit1.dfm=D:\Programming\Projects\Programming Techologies\II Course\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.986,=D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.cpp=D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.715,D:\Programming\Projects\Programming Technologies\Lab1\Core.h=D:\Programming\Projects\Programming Technologies\Lab1\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.982,D:\Programming\Projects\Programming Techologies\II Course\Project1.cbproj=D:\Programming\Projects\Programming Technologies\Lab1\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Unit4.dfm=C:\Programming\Programming Technologies\Lab1\Adding.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.663,=D:\Programming\Projects\Programming Technologies\Lab1\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.715,D:\Programming\Projects\Programming Technologies\Lab1\Core.cpp=D:\Programming\Projects\Programming Technologies\Lab1\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Techologies\II Course\Unit1.dfm=D:\Programming\Projects\Programming Technologies\Lab1\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Unit4.h=C:\Programming\Programming Technologies\Lab1\Adding.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Unit4.cpp=C:\Programming\Programming Technologies\Lab1\Adding.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.595,=C:\Programming\Programming Technologies\Lab1\Unit4.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Techologies\II Course\Unit1.h=D:\Programming\Projects\Programming Technologies\Lab1\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.dfm=D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.417,=D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Adding.dfm=C:\Programming\Programming Technologies\Lab1\Unit4.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.h=D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.986,=D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.900,D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h=D:\Programming\Projects\Programming Technologies\Lab1\Project1PCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.497,=D:\Programming\Projects\Programming Technologies\Lab1\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.h=D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp=D:\Programming\Projects\Programming Technologies\Lab1\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.493,=D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.049,=D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.553,=D:\Programming\Projects\Programming Technologies\Lab1\Unit2.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.715,D:\Programming\Projects\Programming Technologies\Lab1\Unit2.cpp=D:\Programming\Projects\Programming Technologies\Lab1\Core.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.715,D:\Programming\Projects\Programming Technologies\Lab1\Unit2.h=D:\Programming\Projects\Programming Technologies\Lab1\Core.h</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Adding.cpp"/>

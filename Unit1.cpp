@@ -72,7 +72,7 @@ void __fastcall TForm1::About1Click(TObject *Sender) {
 
 void __fastcall TForm1::New1Click(TObject *Sender) {
 	FileCreator->ShowModal();
-	AnsiString Filename = FileCreator->Edit1->Text;
+	Filename = FileCreator->Edit1->Text;
 
 }
 // ---------------------------------------------------------------------------
