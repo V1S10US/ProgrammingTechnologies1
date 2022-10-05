@@ -84,9 +84,8 @@ void __fastcall TForm1::Exit2Click(TObject *Sender) {
 
 void __fastcall TForm1::Save1Click(TObject *Sender) {
 	/* Save as existing or new file, rewrite file with new records */
-	SaveDialog1->Execute();
 
-	// char fn[150];
+	SaveDialog1->Execute();
 
 	Filename = SaveDialog1->FileName;
 

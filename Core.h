@@ -33,7 +33,7 @@ const int MAX_RECORDS = 100;
 
 char  FILENAME[255]; // default filename
 
-int records_amount = 0;
+int records_amount;
 
 VirtualRecord RecordsArray[MAX_RECORDS];  // global array with all current records
 
@@ -51,5 +51,7 @@ int OpenFile(char c_filename[150]);
 int FindFreeSpace();
 
 VirtualRecord to_virtual(FileRecord rec);
+
+void ReadRecords(VirtualRecord *RecordsArray);
 
 int ShowTable();

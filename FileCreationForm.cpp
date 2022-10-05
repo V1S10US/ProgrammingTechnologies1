@@ -26,7 +26,7 @@ void __fastcall TFileCreator::CreateButtonClick(TObject *Sender)
 
 
 	AddFile(FILENAME);
-	OpenFile(FILENAME);
+//	OpenFile(FILENAME);
 
 	Close();
 }
