@@ -37,7 +37,6 @@ int records_amount;
 
 VirtualRecord RecordsArray[MAX_RECORDS];  // global array with all current records
 
-
 int AddRecord(FileRecord rec);
 
 int CreateFile(char c_filename[150]);

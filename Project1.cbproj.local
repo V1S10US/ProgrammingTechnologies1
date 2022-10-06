@@ -12,17 +12,18 @@
     <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Unit4.h=C:\Programming\Programming Technologies\Lab1\Adding.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.042,C:\Programming\Programming Technologies\Lab1\Unit4.cpp=C:\Programming\Programming Technologies\Lab1\Adding.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.595,=C:\Programming\Programming Technologies\Lab1\Unit4.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.497,=D:\Programming\Projects\Programming Technologies\Lab1\Unit2.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Techologies\II Course\Unit1.h=D:\Programming\Projects\Programming Technologies\Lab1\Unit1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.dfm=D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.417,=D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.986,=D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.900,D:\Programming\Projects\Programming Techologies\II Course\Project1PCH1.h=D:\Programming\Projects\Programming Technologies\Lab1\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.497,=D:\Programming\Projects\Programming Technologies\Lab1\Unit2.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.093,D:\Programming\Projects\ProgrammingTechnologies\Lab1\Unit5.h=D:\Programming\Projects\ProgrammingTechnologies\Lab1\FileCreationForm.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.804,D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp=D:\Programming\Projects\Programming Technologies\Lab1\Unit1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.493,=D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.049,=D:\Programming\Projects\Programming Techologies\II Course\Unit1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.553,=D:\Programming\Projects\Programming Technologies\Lab1\Unit2.cpp</Transaction>
+    <Transaction>2022.10.06 10:22:13.662,C:\Programming\ProgrammingTechnologies\Lab1\Project1PCH1.h=</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Adding.cpp"/>
@@ -33,7 +34,6 @@
     <File Path="Core.cpp"/>
     <File Path="Core.h"/>
     <File Path="Project1.cpp"/>
-    <File Path="Project1PCH1.h"/>
     <File Path="Unit1.cpp"/>
     <File Path="Unit1.cpp"/>
     <File Path="Unit1.dfm"/>

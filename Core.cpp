@@ -24,6 +24,13 @@ int AddFile(char c_filename[150]) {
 	short tmp = -1;
 	int code = fwrite(&tmp, sizeof(tmp), 1, f);
 	records_amount = 0;
+	FileRecord rec;
+	// rec.car_name = ;
+	// rec.car_brand = "";
+	for (int i = 0; i < MAX_RECORDS; i++)
+		{
+			fwrite(&rec, sizeof(rec), 1, f);
+		}
 
 	return code;
 }
@@ -36,9 +43,10 @@ int SaveFile(char c_filename[150]) {
 
 	int code = 0;
 	f = fopen(c_filename, "wb+");
-	fseek(f, sizeof(int), SEEK_SET);
+	fseek(f, sizeof(short), SEEK_SET);
 
-	for (auto rec : RecordsArray) {
+	FileRecord rec;
+	for (int i = 0; i < MAX_RECORDS; ++i) {
 		code = fwrite(&rec, sizeof(FileRecord), 1, f);
 	}
 
@@ -147,11 +155,11 @@ void ReadRecords(VirtualRecord RecordsArray[MAX_RECORDS]) {
 
 	FileRecord temp_rec;
 
-	for (int i = 1; i <= MAX_RECORDS; ++i) {
+	for (int i = 0; i < MAX_RECORDS; ++i) {
 
 		fread(&temp_rec, sizeof(temp_rec), 1, f);
 		RecordsArray[i] = to_virtual(temp_rec);
-        fseek(f, sizeof(temp_rec), SEEK_CUR);
+		fseek(f, sizeof(short)+ sizeof(temp_rec)*i , SEEK_SET);
 
 	}
 
